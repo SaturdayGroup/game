@@ -16,6 +16,10 @@ func _process(delta):
 		velocity.x += 1
 	if Input.is_action_pressed("ui_left"):
 		velocity.x -= 1
+	if Input.is_action_pressed("ui_up"):
+		velocity.y += 1
+	if Input.is_action_pressed("ui_down"):
+		velocity.y -= 1
 
 	# Update sprite direction
 	if velocity.x != 0:
