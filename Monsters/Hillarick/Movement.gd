@@ -33,6 +33,7 @@ func _process(delta):
 		get_node("Animated Sprite").stop()
 
 	# Update position
-	position += velocity * delta
+	position.x += velocity.x * delta
+	position.y += velocity.y * delta
 	position.x = clamp(position.x, 0, screen_size.x)
 	position.y = clamp(position.y, 0, screen_size.y)
