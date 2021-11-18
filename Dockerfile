@@ -1,7 +1,7 @@
 FROM barichello/godot-ci:3.4 AS builder
 COPY . /src
 WORKDIR /src
-RUN rm -r Build && mkdir Build
+RUN rm -rf Build && mkdir Build
 RUN godot --export web
 
 FROM nginx:latest
